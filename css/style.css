@@ -41,13 +41,17 @@ body, main {
 .hero {
   display: flex;
   content: "";
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 85%, white 100%), url("../images/BG_SuperSmashCharacters.jpg");
-  background-size: contain;
-  background-repeat: repeat;
-  background-position: center top;
   width: 100%;
   overflow: hidden;
   padding: 20px 15px 85px 15px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 85%, white 100%), url("../images/BG_SuperSmashCharacters.jpg");
+  background-size: contain;
+  background-repeat: repeat;
+  animation-name: gallery-background-scroll;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: normal;
+  animation-duration: 60s;
 }
 
 .hero .hero-container {
@@ -62,5 +66,25 @@ body, main {
   border-radius: 5px 5px 0px 0px;
   width: 100%;
   height: auto;
+}
+
+@keyframes gallery-background-scroll {
+  0% {
+    background-position: 0vw 0%;
+  }
+  25% {
+    background-position: 0vw 0%;
+  }
+  50% {
+    background-position: 100vw -1122.5%;
+  }
+  /* The background fade-out breaks if you move vertivally with pixels */
+  75% {
+    background-position: 100vw -1122.5%;
+  }
+  /* It takes much longer for it to break with precentages */
+  100% {
+    background-position: 0vw 0%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

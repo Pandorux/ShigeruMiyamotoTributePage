@@ -4,6 +4,9 @@ $bg-main-color: #ffffff;
 $bg-gallery-color: rgba(256, 256, 256, 0.85);
 $border-radius-gallery: 5px;
 
+// The play speed of animation will be $gallery-anim-dur / 4 
+$gallery-anim-dur: 60s; // This due to the animation being split into 4 even parts: break, scroll, break, scroll back to start, and then it repeats
+
 /* Global Styles */
 
 * {
@@ -52,20 +55,24 @@ body, main {
 .hero {
     display: flex;
     content: "";
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 15px 85px 15px;
+
     background-image: linear-gradient(
         rgba(0, 0, 0, 0), 
         rgba(0, 0, 0, 0) 85%, 
         white 100%
     ), 
     url("../images/BG_SuperSmashCharacters.jpg");
-    //background-image: url("../images/BG_SuperSmashCharacters.jpg");
-    //  linear-gradient(white, white 80%, rbga(0, 0, 0, 0) 100%);
     background-size: contain;
     background-repeat: repeat;
-    background-position: center top;
-    width: 100%;
-    overflow: hidden;
-    padding: 20px 15px 85px 15px;
+
+    animation-name: gallery-background-scroll;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: normal;
+    animation-duration: $gallery-anim-dur;
 
     .hero-container {
         margin: auto;
@@ -83,4 +90,14 @@ body, main {
         width: 100%;
         height: auto;
     }
+}
+
+@keyframes gallery-background-scroll {
+    
+    0% { background-position: 0vw 0%; }
+    25% { background-position: 0vw 0%; }
+    50% { background-position: 100vw -1122.5%; } /* The background fade-out breaks if you move vertivally with pixels */
+    75% { background-position: 100vw -1122.5%; } /* It takes much longer for it to break with precentages */
+    100% { background-position: 0vw 0%; }
+
 }
