@@ -1,14 +1,9 @@
 
 let galleryIndex = 0;
-const d = new Date();
 const miyamotoImages = [
     "images/Miyamoto_Signature.jpg",
     "images/Shigeru_Miyamoto.jpg",
-    "images/Miyamoto_Luigi.jpg",
-    "images/Miyamoto_Mario.png",
-    "images/Miyamoto_Fun.jpg",
     "images/Miyamoto_Professional.jpg",
-    "images/Miyamoto_Preso.jpg",
 ];
 
 function galleryImageChange(changeRight) {

@@ -39,7 +39,6 @@ body, main {
 }
 
 .hero {
-  display: flex;
   content: "";
   width: 100%;
   overflow: hidden;
@@ -55,6 +54,9 @@ body, main {
 }
 
 .hero .hero-container {
+  display: flex;
+  flex-direction: column;
+  height: 52.5vh;
   margin: auto;
   max-width: 425px;
   padding: 10px;
@@ -69,8 +71,8 @@ body, main {
 }
 
 .hero-gallery-display img {
-  border-radius: 5px 5px 0px 0px;
-  width: 75%;
+  border-radius: 5px;
+  width: 70%;
   height: auto;
 }
 
@@ -84,6 +86,15 @@ body, main {
   margin: auto;
   height: 10vw;
   width: 10vw;
+}
+
+.hero-gallery-text {
+  padding: 10px;
+}
+
+.hero-gallery-text img-caption {
+  font-size: 12px;
+  margin: auto;
 }
 
 @keyframes gallery-background-scroll {
