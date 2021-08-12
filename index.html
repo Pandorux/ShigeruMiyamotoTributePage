@@ -18,10 +18,14 @@
 
             <section class="hero">
                 <div class="hero-container">
-                    <div id="img-div" class="hero-gallery">
-                        <img id="image" src="images/Miyamoto_Signature.jpg" alt="">
+                    <div id="img-div" class="hero-gallery-display">
+                        <button id="gallery-left-button"><</button>
+                        <img id="image" alt="">
+                        <button id="gallery-right-button">></button>
+                    </div>
+                    <div class="hero-gallery-text">
                         <img-caption id="img-caption">
-                            Miyamoto doing a fancy mario signature
+                        Miyamoto doing a fancy mario signature
                         </img-caption>
                     </div>
                 </div>
@@ -30,7 +34,9 @@
             <section class="tribute-info" id="tribute-info">
                 <a id="tribute-link" href="/"></a>
             </section>
-
         </main>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script src="script.js">setGallery();</script>
     </body>
 </html>
