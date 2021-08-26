@@ -23,6 +23,15 @@ body, main {
     text-align: center;
 }
 
+h2 {
+    padding: 15px 0px;
+}
+
+li {
+    text-align: justify;
+    padding: 10px 10px;
+}
+
 // Name-Drop Styles
 
 .name-drop {
@@ -127,4 +136,39 @@ body, main {
     75% { background-position: 100vw -1122.5%; } /* It takes much longer for it to break with precentages */
     100% { background-position: 0vw 0%; }
 
+}
+
+// Tribute Info Styles
+
+.tribute-info {
+    padding: 30px 20px;
+    
+    ul {
+        padding-left: 5vw;
+    }
+}
+
+.tribute-info-ludography {
+    padding-top: 40px;
+
+    .ludography {
+        max-height: 70vh;
+        overflow: scroll;
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: auto;
+
+            th, td {
+                padding: 10px;
+            }
+        }
+    }
+}
+
+// Footer Styles
+
+footer {
+    padding: 15px 0px 40px 0px;
 }
