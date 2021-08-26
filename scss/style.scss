@@ -76,7 +76,6 @@ ul {
 
 .hero {
     content: "";
-    width: 100%;
     overflow: hidden;
     padding: 20px 15px 85px 15px;
 
@@ -98,12 +97,14 @@ ul {
     .hero-container {
         display: flex;
         flex-direction: column;
-        height: 52.5vh;
-        margin: auto;
-        max-width: 425px;
-        padding: 10px;
         background-color: $bg-gallery-color;
         border-radius: $border-radius-gallery;
+        width: 90vw;
+        max-width: 425px;
+        max-height: 650px;
+        min-height: 450px;
+        margin: auto;
+        padding: 10px;
     }
 }
 
@@ -124,22 +125,22 @@ ul {
 
     img-caption {
         font-size: 12px;
+        font-weight: 600;
         margin: auto;
     }
 }
 
 .hero-gallery-navigation {
-    position: relative;
-    bottom: 65%;
+    display: flex;
+    position: absolute;
+    top: 50%;
 
     #gallery-left-button {
         position: relative;
-        right: 45%;
     }
 
     #gallery-right-button {
         position: relative;
-        left: 45%
     }
 
     button {
@@ -203,11 +204,12 @@ ul {
 
     .ludography {
         max-height: 70vh;
-        overflow: scroll;
+        max-width: 900px;
+        overflow: auto;
+        margin: auto;
 
         table {
             width: 100%;
-            margin: auto;
 
             th {
                 color: $text-sub-color;
@@ -218,19 +220,34 @@ ul {
                 padding: 10px;
             }
         }
-
-
     }
 }
 
 // Footer Styles
 
 footer {
-    color: $text-sub-color;
     background-color: $bg-sub-color;
-    padding: 25px 10px;
+
+    p {
+        color: $text-sub-color;
+        padding: 25px 10px;
+        max-width: 450px;
+        margin: auto;
+    }
 
     a {
         color: $text-sub-color;
+    }
+}
+
+// Media Queries
+
+@media screen and (min-width: 475px)  {
+    
+    .tribute-info {
+
+        ul {
+            padding-left: 0px;
+        }
     }
 }
