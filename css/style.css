@@ -99,18 +99,6 @@ ul li::before {
   height: auto;
 }
 
-.hero-gallery-display button {
-  background-color: cyan;
-  font-size: 20px;
-  padding: 10px;
-  text-align: center;
-  vertical-align: middle;
-  border-radius: 50%;
-  margin: auto;
-  height: 10vw;
-  width: 10vw;
-}
-
 .hero-gallery-text {
   padding: 10px;
 }
@@ -118,6 +106,41 @@ ul li::before {
 .hero-gallery-text img-caption {
   font-size: 12px;
   margin: auto;
+}
+
+.hero-gallery-navigation {
+  position: relative;
+  bottom: 65%;
+}
+
+.hero-gallery-navigation #gallery-left-button {
+  position: relative;
+  right: 45%;
+}
+
+.hero-gallery-navigation #gallery-right-button {
+  position: relative;
+  left: 45%;
+}
+
+.hero-gallery-navigation button {
+  color: #ffffff;
+  background-color: #e60012;
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+  border-style: none;
+  border-radius: 5px;
+  margin: auto;
+  height: 64px;
+  width: 32px;
+  transition: transform .2s ease-out;
+}
+
+.hero-gallery-navigation button:hover {
+  color: #ffffff;
+  transform: scale(1.2);
 }
 
 @keyframes gallery-background-scroll {

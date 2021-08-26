@@ -117,19 +117,6 @@ ul {
         width: 70%;
         height: auto;
     }
-
-    button {
-        background-color: cyan;
-        font-size: 20px;
-        padding: 10px;
-        text-align: center;
-        vertical-align: middle;
-        //border-style: none;
-        border-radius: 50%;
-        margin: auto;
-        height: 10vw;
-        width: 10vw;
-    }
 }
 
 .hero-gallery-text {
@@ -139,6 +126,51 @@ ul {
         font-size: 12px;
         margin: auto;
     }
+}
+
+.hero-gallery-navigation {
+    position: relative;
+    bottom: 65%;
+
+    #gallery-left-button {
+        position: relative;
+        right: 45%;
+    }
+
+    #gallery-right-button {
+        position: relative;
+        left: 45%
+    }
+
+    button {
+        color: $text-sub-color;
+        background-color:$bg-sub-color;
+        font-size: 20px;
+        padding: 10px;
+        text-align: center;
+        vertical-align: middle;
+        border-style: none;
+        border-radius: 5px;
+        margin: auto;
+        height: 64px;
+        width: 32px;
+
+        -webkit-transition:  -webkit-transform .2s ease-out;
+        -moz-transition: -moz-transform .2s ease-out;
+        -o-transition: -o-transform .2s ease-out;
+        -ms-transition: -ms-transform .2s ease-out; 
+        transition: transform .2s ease-out; 
+    }
+
+    button:hover {
+        color: $text-sub-color;
+
+        -webkit-transform:scale(1.2);
+        -moz-transform:scale(1.2);
+        -o-transform:scale(1.2);
+        transform:scale(1.2);
+    }
+
 }
 
 @keyframes gallery-background-scroll {
@@ -195,6 +227,5 @@ footer {
 
     a {
         color: $text-sub-color;
-
     }
 }
