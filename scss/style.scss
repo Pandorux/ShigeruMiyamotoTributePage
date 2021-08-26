@@ -1,6 +1,8 @@
 
 $text-main-color: #333333;
+$text-sub-color: #ffffff;
 $bg-main-color: #ffffff;
+$bg-sub-color: #e60012; // Nintendo Red
 $bg-gallery-color: rgba(256, 256, 256, 0.85);
 $border-radius-gallery: 5px;
 
@@ -27,33 +29,44 @@ h2 {
     padding: 15px 0px;
 }
 
-li {
-    text-align: justify;
-    padding: 10px 10px;
+ul {
+    list-style: none;
+
+    
+    li {
+        text-align: justify;
+        padding: 10px 10px;
+    }
+
+    li::before {
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        color: $bg-sub-color; /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        width: 2em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
 }
+
 
 // Name-Drop Styles
 
 .name-drop {
-    content: "";
-    background-image: url("../images/BG_Header.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center bottom;
+    background-color: $bg-sub-color;
     min-height: 100%;
     width: 100%;
-    overflow: hidden;
     
     * {
-        padding: 10px 0px 5px 0px;
+        padding: 10px 0px 0px 0px;
     }
 
     h1 {
-        font-size: 34px;
+        color: $text-sub-color;
+        font-size: 38px;
     }
     
     p {
-        font-weight: 600;
+        color: $text-sub-color;
+        font-weight: 400;
         font-style: bold;
         padding-bottom: 15px;
     }
@@ -98,7 +111,7 @@ li {
     display: flex;
     justify-content: space-evenly;
     align-content: center;
-
+    
     img {
         border-radius: $border-radius-gallery;
         width: 70%;
@@ -157,18 +170,31 @@ li {
 
         table {
             width: 100%;
-            border-collapse: collapse;
             margin: auto;
+
+            th {
+                color: $text-sub-color;
+                background-color: $bg-sub-color;
+            }
 
             th, td {
                 padding: 10px;
             }
         }
+
+
     }
 }
 
 // Footer Styles
 
 footer {
-    padding: 15px 0px 40px 0px;
+    color: $text-sub-color;
+    background-color: $bg-sub-color;
+    padding: 25px 0px 25px 0px;
+
+    a {
+        color: $text-sub-color;
+
+    }
 }

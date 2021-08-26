@@ -17,32 +17,46 @@ h2 {
   padding: 15px 0px;
 }
 
-li {
+ul {
+  list-style: none;
+}
+
+ul li {
   text-align: justify;
   padding: 10px 10px;
 }
 
+ul li::before {
+  content: "\2022";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #e60012;
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  width: 2em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+  /* Also needed for space (tweak if needed) */
+}
+
 .name-drop {
-  content: "";
-  background-image: url("../images/BG_Header.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center bottom;
+  background-color: #e60012;
   min-height: 100%;
   width: 100%;
-  overflow: hidden;
 }
 
 .name-drop * {
-  padding: 10px 0px 5px 0px;
+  padding: 10px 0px 0px 0px;
 }
 
 .name-drop h1 {
-  font-size: 34px;
+  color: #ffffff;
+  font-size: 38px;
 }
 
 .name-drop p {
-  font-weight: 600;
+  color: #ffffff;
+  font-weight: 400;
   font-style: bold;
   padding-bottom: 15px;
 }
@@ -145,8 +159,12 @@ li {
 
 .tribute-info-ludography .ludography table {
   width: 100%;
-  border-collapse: collapse;
   margin: auto;
+}
+
+.tribute-info-ludography .ludography table th {
+  color: #ffffff;
+  background-color: #e60012;
 }
 
 .tribute-info-ludography .ludography table th, .tribute-info-ludography .ludography table td {
@@ -154,6 +172,12 @@ li {
 }
 
 footer {
-  padding: 15px 0px 40px 0px;
+  color: #ffffff;
+  background-color: #e60012;
+  padding: 25px 0px 25px 0px;
+}
+
+footer a {
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
