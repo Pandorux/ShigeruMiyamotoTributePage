@@ -187,9 +187,14 @@ ul {
 
 .tribute-info {
     padding: 30px 20px;
-    
+
     ul {
         padding-left: 5vw;
+
+        li {
+            margin: auto;
+            max-width: 420px;
+        }
     }
 }
 
@@ -223,7 +228,7 @@ ul {
 footer {
     color: $text-sub-color;
     background-color: $bg-sub-color;
-    padding: 25px 0px 25px 0px;
+    padding: 25px 10px;
 
     a {
         color: $text-sub-color;

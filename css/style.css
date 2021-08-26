@@ -171,6 +171,11 @@ ul li::before {
   padding-left: 5vw;
 }
 
+.tribute-info ul li {
+  margin: auto;
+  max-width: 420px;
+}
+
 .tribute-info-ludography {
   padding-top: 40px;
 }
@@ -197,7 +202,7 @@ ul li::before {
 footer {
   color: #ffffff;
   background-color: #e60012;
-  padding: 25px 0px 25px 0px;
+  padding: 25px 10px;
 }
 
 footer a {
