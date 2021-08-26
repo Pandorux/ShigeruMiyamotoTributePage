@@ -118,29 +118,15 @@ ul {
         width: 70%;
         height: auto;
     }
-}
-
-.hero-gallery-text {
-    padding: 10px;
-
-    img-caption {
-        font-size: 12px;
-        font-weight: 600;
-        margin: auto;
-    }
-}
-
-.hero-gallery-navigation {
-    display: flex;
-    position: absolute;
-    top: 50%;
 
     #gallery-left-button {
         position: relative;
+        right: 10%;
     }
 
     #gallery-right-button {
         position: relative;
+        left: 10%;
     }
 
     button {
@@ -171,7 +157,16 @@ ul {
         -o-transform:scale(1.2);
         transform:scale(1.2);
     }
+}
 
+.hero-gallery-text {
+    padding: 10px;
+
+    img-caption {
+        font-size: 13px;
+        font-weight: 900;
+        margin: auto;
+    }
 }
 
 @keyframes gallery-background-scroll {
