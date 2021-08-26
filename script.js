@@ -10,8 +10,8 @@ function galleryImageChange(changeRight) {
     galleryIndex = changeRight ? galleryIndex + 1 : galleryIndex - 1;
 
     if(galleryIndex < 0) {
-        galleryIndex = miyamotoImages.length;
-    } else if (galleryIndex > miyamotoImages.length) {
+        galleryIndex = miyamotoImages.length - 1;
+    } else if (galleryIndex >= miyamotoImages.length) {
         galleryIndex = 0;
     }
 }
